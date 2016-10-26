@@ -1,0 +1,22 @@
+{
+  "name": "simple-node-server",
+  "description": "",
+  "authors": [
+    "Temmermans <temmerman.simon@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "bootstrap": "^3.3.7",
+    "smooth-scroll": "^1.0.1"
+  },
+  "private": true
+}

@@ -1,0 +1,46 @@
+{
+  "name": "simple-node-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "postinstall": "bower install",
+    "test": "mocha test",
+    "build:css": "lessc src/assets/less/app.less public/css/app.min.css -x",
+    "build:js": "uglifyjs src/assets/js/*.js -o public/js/app.min.js",
+    "build:img": "imagemin src/assets/img/* --out-dir=public/img",
+    "build": "npm run build:css && npm run build:js && npm run build:img",
+    "postbuild:css": "npm run start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "bower": "^1.7.9",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "csurf": "^1.9.0",
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.13.0",
+    "helmet": "^2.1.0",
+    "morgan": "^1.7.0",
+    "ms": "^0.7.1",
+    "socket.io": "^1.4.8"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "cheerio": "^0.20.0",
+    "debug": "^2.2.0",
+    "errorhandler": "^1.4.3",
+    "imagemin-cli": "^3.0.0",
+    "less": "^2.7.1",
+    "minifier": "^0.8.0",
+    "mocha": "^2.5.3",
+    "rimraf": "^2.4.3",
+    "supertest": "^1.2.0",
+    "uglify-js": "^2.7.3"
+  }
+}
